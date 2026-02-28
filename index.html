@@ -3,161 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Portfolio | Your Name</title>
+    <title>Antonio Esteves | Mechanical Engineering Portfolio</title>
     <style>
         :root {
-            --primary: #2563eb; /* Engineering Blue */
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --text: #334155;
+            --primary: #0f172a; /* Deep Charcoal */
+            --accent: #2563eb;  /* Engineering Blue */
+            --bg: #ffffff;
+            --light-gray: #f1f5f9;
+            --text-main: #334155;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             line-height: 1.6;
             margin: 0;
-            color: var(--text);
-            background-color: var(--light);
+            color: var(--text-main);
+            scroll-behavior: smooth;
         }
 
-        /* Navigation */
         nav {
-            background: var(--dark);
-            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 10%;
             position: fixed;
-            width: 100%;
+            width: 80%;
             top: 0;
             z-index: 1000;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        nav a {
-            color: white;
+        .nav-links a {
             text-decoration: none;
-            margin: 0 1.5rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--primary);
+            margin-left: 2rem;
+            font-weight: 500;
+            font-size: 0.9rem;
         }
 
-        /* Sections */
-        section {
-            padding: 100px 20rem;
-            min-height: 80vh;
-        }
+        section { padding: 100px 10% 60px; max-width: 1100px; margin: 0 auto; }
 
-        h1, h2 { color: var(--dark); }
+        /* Project Styling */
+        .project-header { margin-bottom: 2rem; border-bottom: 2px solid var(--light-gray); padding-bottom: 1rem; }
+        .project-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .project-subtitle { font-size: 1.2rem; color: #64748b; margin-bottom: 1rem; }
         
-        /* Home Section */
-        #home {
-            text-align: center;
-            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        .tag-container { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 2rem; }
+        .tag { background: var(--light-gray); color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
 
-        .btn {
-            background: var(--primary);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 1rem;
-        }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 2rem; }
+        
+        .content-box { background: var(--light-gray); padding: 2rem; border-radius: 8px; }
+        h3 { color: var(--primary); border-left: 4px solid var(--accent); padding-left: 10px; }
 
-        /* CV Section */
-        .cv-item {
-            border-left: 3px solid var(--primary);
-            padding-left: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Projects Section */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
 
         @media (max-width: 768px) {
-            section { padding: 80px 2rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            nav { width: 100%; padding: 1rem 5%; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#cv">CV</a>
-        <a href="#projects">Projects</a>
+        <div style="font-weight: bold; font-size: 1.2rem;">ANTONIO ESTEVES</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#cv">CV</a>
+            <a href="#projects">Projects</a>
+        </div>
     </nav>
 
-    <section id="home">
-        <h1>Hi, I'm [Your Name]</h1>
-        <p>Mechanical/Electrical/Software Engineer specializing in [Your Niche].</p>
-        <p>Building efficient solutions for complex problems.</p>
-        <a href="#projects" class="btn">View My Work</a>
+    <section id="home" style="text-align: center; min-height: 50vh; display: flex; flex-direction: column; justify-content: center;">
+        <h1>Mechanical Engineer</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Specializing in Structural Analysis, Parametric CAD Modeling, and Finite Element Validation.</p>
     </section>
-
-    <hr>
-
-    <section id="cv">
-        <h2>Curriculum Vitae</h2>
-        
-        <div class="cv-item">
-            <h3>Education</h3>
-            <p><strong>B.Sc. in Engineering</strong> | University Name (2018 - 2022)</p>
-        </div>
-
-        <div class="cv-item">
-            <h3>Experience</h3>
-            <p><strong>Junior Engineer</strong> | Company XYZ (2022 - Present)</p>
-            <ul>
-                <li>Optimized system performance by 15%.</li>
-                <li>Led a team of 4 in hardware prototyping.</li>
-            </ul>
-        </div>
-
-        <div class="cv-item">
-            <h3>Skills</h3>
-            <p>CAD (SolidWorks), Python, Project Management, MATLAB, Circuit Design.</p>
-        </div>
-    </section>
-
-    <hr>
 
     <section id="projects">
-        <h2>Technical Projects</h2>
-        <div class="project-grid">
+        <div class="project-header">
+            <h1 class="project-title">Mechanical Bearing Extractor</h1>
+            <p class="project-subtitle">Design and Structural Validation of a Manual Three-Jaw Puller</p>
+            <div class="tag-container">
+                <span class="tag">Mechanical Design</span>
+                <span class="tag">Structural Analysis</span>
+                <span class="tag">CAD</span>
+                <span class="tag">FEA</span>
+                <span class="tag">Autodesk Inventor</span>
+            </div>
+        </div>
+
+        <div class="context-section">
+            <h3>Context</h3>
+            <p>This project marks my first comprehensive mechanical design case study, developed during my Bachelor’s degree in Mechanical Engineering. The process included parametric 3D modeling, technical drawings, and structural validation performed using <strong>Inventor Stress Analysis Environment</strong>.</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="content-box">
+                <h3>Project Overview</h3>
+                <ul>
+                    <li><strong>Capacity:</strong> 100 kN axial extraction force.</li>
+                    <li><strong>Weight:</strong> Lightweight (~8 kg) manufacturable solution.</li>
+                    <li><strong>Safety:</strong> Target Safety Factor (SF) ≥ 2.</li>
+                    <li><strong>Tools:</strong> Analytical calculations, Material selection, and FEA validation.</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <h3>Problem / Constraints</h3>
+                <ul>
+                    <li>Manual screw actuation system.</li>
+                    <li>Conventional machining processes.</li>
+                    <li>Compact and adjustable geometry.</li>
+                    <li>Cost-efficient, commercially available materials.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <h3>Approach & Engineering Decisions</h3>
+            <p><strong>Material Selection: AISI 1045 QT Steel</strong><br>
+            Chosen for high yield strength (450 MPa) and excellent machinability. This ensured structural integrity under the 100 kN design load while maintaining cost efficiency.</p>
             
-            <div class="project-card">
-                <h3>Autonomous Drone Design</h3>
-                <p>Developed a flight control algorithm using Python and Raspberry Pi to navigate obstacle courses.</p>
-                <strong>Tech:</strong> C++, Linux, ROS.
-            </div>
-
-            <div class="project-card">
-                <h3>Smart Grid Optimization</h3>
-                <p>Simulated a local power grid to reduce energy waste during peak hours.</p>
-                <strong>Tech:</strong> MATLAB, Simulink.
-            </div>
-
+            <p><strong>Power Screw: M30 Square Thread</strong><br>
+            I specified an M30 power screw with a 2.5mm pitch. Square threads were selected over standard triangular threads to maximize mechanical efficiency and reduce manual torque requirements.</p>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 2rem; background: var(--dark); color: white;">
-        <p>&copy; 2024 [Your Name] | Engineering Portfolio</p>
+    <footer style="text-align: center; padding: 4rem; color: #94a3b8; font-size: 0.8rem;">
+        &copy; 2026 Antonio Esteves | Built with GitHub Pages
     </footer>
 
 </body>
+</html>
 </html>
