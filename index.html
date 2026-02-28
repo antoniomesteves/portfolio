@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio | Your Name</title>
+    <style>
+        :root {
+            --primary: #2563eb; /* Engineering Blue */
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--dark);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20rem;
+            min-height: 80vh;
+        }
+
+        h1, h2 { color: var(--dark); }
+        
+        /* Home Section */
+        #home {
+            text-align: center;
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* CV Section */
+        .cv-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Projects Section */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 80px 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cv">CV</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <section id="home">
+        <h1>Hi, I'm [Your Name]</h1>
+        <p>Mechanical/Electrical/Software Engineer specializing in [Your Niche].</p>
+        <p>Building efficient solutions for complex problems.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <hr>
+
+    <section id="cv">
+        <h2>Curriculum Vitae</h2>
+        
+        <div class="cv-item">
+            <h3>Education</h3>
+            <p><strong>B.Sc. in Engineering</strong> | University Name (2018 - 2022)</p>
+        </div>
+
+        <div class="cv-item">
+            <h3>Experience</h3>
+            <p><strong>Junior Engineer</strong> | Company XYZ (2022 - Present)</p>
+            <ul>
+                <li>Optimized system performance by 15%.</li>
+                <li>Led a team of 4 in hardware prototyping.</li>
+            </ul>
+        </div>
+
+        <div class="cv-item">
+            <h3>Skills</h3>
+            <p>CAD (SolidWorks), Python, Project Management, MATLAB, Circuit Design.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="projects">
+        <h2>Technical Projects</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <h3>Autonomous Drone Design</h3>
+                <p>Developed a flight control algorithm using Python and Raspberry Pi to navigate obstacle courses.</p>
+                <strong>Tech:</strong> C++, Linux, ROS.
+            </div>
+
+            <div class="project-card">
+                <h3>Smart Grid Optimization</h3>
+                <p>Simulated a local power grid to reduce energy waste during peak hours.</p>
+                <strong>Tech:</strong> MATLAB, Simulink.
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; background: var(--dark); color: white;">
+        <p>&copy; 2024 [Your Name] | Engineering Portfolio</p>
+    </footer>
+
+</body>
+</html>
